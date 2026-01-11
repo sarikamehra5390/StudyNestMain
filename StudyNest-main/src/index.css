@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg1:#0B0618 ; 
+  --bg2:#190C3D ; 
+  --bg3:#2A145A ; 
+  --card:rgba(255,255,255,0.06 ); 
+  --card-border:rgba(255,255,255,0.12 ); 
+
+  --text:#F4F1FF ; 
+  --muted:rgba(244,241,255,0.72 ); 
+
+  --accent:#F2A14A;      /* warm orange */ 
+  --accent2:#FFCE8A;     /* soft amber */ 
+  --glow:rgba(242,161,74,0.35 ); 
+}
+
+body {
+  background: linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 50%, var(--bg3) 100%);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.glass {
+  background: var(--card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+}
+
+.glass-nav {
+  background: rgba(11, 6, 24, 0.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--card-border);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg1);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--card-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #fff, var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.text-muted {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.gochi-hand-regular {
+  font-family: "Gochi Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1, h2 {
+  font-family: "Gochi Hand", cursive;
+} 
+
+h3, h4, h5, h6, p{
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
